@@ -1,2 +1,2 @@
 # simpeTableView
-the tableView create tableView using prototype cell.
+The simpleTableView project creates tableView using prototype cell.
