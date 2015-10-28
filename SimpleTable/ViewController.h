@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) NSMutableDictionary* recipeChecked;
 
 
 @end

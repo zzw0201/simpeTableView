@@ -5,7 +5,10 @@
 //  Created by ccc on 2015/10/26.
 //  Copyright © 2015年 guanglin. All rights reserved.
 // 
-
+//TODO: test
+//FIXME: fix whther the checkmark show or not using NSMutableDictionary to record.
+//???: test
+//!!!!: test
 #import "ViewController.h"
 #import "simpleTableViewCell.h"
 
@@ -14,13 +17,20 @@
 @end
 
 @implementation ViewController{
-    NSArray *recipes;
-    BOOL recipeChecked[11];
+    NSMutableArray *recipes;
+  
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    recipes = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",nil];
+
+    recipes = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",nil];
+
+    //init showcheckmark dictionary
+    self.recipeChecked = [[NSMutableDictionary alloc] init];
+
+
+
     //為了避免表格的內容覆蓋到狀態欄
     [self.tableView setContentInset:UIEdgeInsetsMake(20,
                                                     self.tableView.contentInset.left,self.tableView.contentInset.bottom,self.tableView.contentInset.right)];
@@ -51,12 +61,11 @@
     cell.nameLabel.text = [recipes objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:@"66.jpg"];
     //更新打勾圖示是否有勾選
-    if(recipeChecked[indexPath.row]){
-        cell.accessoryType =UITableViewCellAccessoryCheckmark;
-    }else {
-        cell.accessoryType =UITableViewCellAccessoryNone;
+    if([self.recipeChecked valueForKey:[NSString stringWithFormat:@"%ld",indexPath.row]]){
+        cell.accessoryType  = UITableViewCellAccessoryCheckmark;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
-
 
     return cell;
 
@@ -88,23 +97,27 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self presentViewController:alertMessage  animated:YES completion:nil];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath: indexPath];
     //顯示打勾的提示
-    if(recipeChecked[indexPath.row]){
-         cell.accessoryType = UITableViewCellAccessoryNone;
-        //取消哪一行顯示打勾
-        recipeChecked[indexPath.row] = NO;
-        
-    }else{
+    if(cell.accessoryType == UITableViewCellAccessoryNone){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        //記入哪一行顯示打勾
-        recipeChecked[indexPath.row] = YES;
+        [self.recipeChecked setObject:[NSNumber numberWithBool:YES] forKey: [NSString stringWithFormat:@"%ld",(long)indexPath.row]];
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        [self.recipeChecked removeObjectForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.row ]];
+
+
     }
 
 
 
-
+}
+#pragma mark -  delete tableView data
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath{
+    [recipes removeObjectAtIndex:indexPath.row];
+    [self.recipeChecked removeObjectForKey:[NSString stringWithFormat:@"%ld",indexPath.row]];
+    [tableView reloadData];
 
 }
-
-
 
 @end
