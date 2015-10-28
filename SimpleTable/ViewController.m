@@ -24,7 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    recipes = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",nil];
+//    recipes = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",nil];
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"recipes" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    recipes = [dict objectForKey:@"Name"];
 
     //init showcheckmark dictionary
     self.recipeChecked = [[NSMutableDictionary alloc] init];
