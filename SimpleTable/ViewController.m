@@ -6,7 +6,7 @@
 //  Copyright © 2015年 guanglin. All rights reserved.
 // 
 //TODO: test
-//FIXME: fix whther the checkmark show or not using NSMutableDictionary to record.
+//FIXME: fix whther the checkmark show or not using NSMutableDictionary data structure to record.
 //???: test
 //!!!!: test
 #import "ViewController.h"
