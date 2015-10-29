@@ -16,6 +16,7 @@
 		4A346F331BDDC3C200BDACF9 /* SimpleTableUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A346F321BDDC3C200BDACF9 /* SimpleTableUITests.m */; };
 		4A346F411BDDD49100BDACF9 /* 66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A346F401BDDD49100BDACF9 /* 66.jpg */; settings = {ASSET_TAGS = (); }; };
 		4A346F461BDDE78000BDACF9 /* simpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A346F451BDDE78000BDACF9 /* simpleTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		4A5F5BA81BE1CAB20066046B /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F5BA71BE1CAB20066046B /* RecipeDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4A610DDC1BE0991800F1B2F2 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A610DDB1BE0991800F1B2F2 /* recipes.plist */; settings = {ASSET_TAGS = (); }; };
 		4A610DDE1BE0A7ED00F1B2F2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A610DDD1BE0A7ED00F1B2F2 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -56,6 +57,8 @@
 		4A346F401BDDD49100BDACF9 /* 66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 66.jpg; path = ../66.jpg; sourceTree = "<group>"; };
 		4A346F441BDDE78000BDACF9 /* simpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simpleTableViewCell.h; path = ../simpleTableViewCell.h; sourceTree = "<group>"; };
 		4A346F451BDDE78000BDACF9 /* simpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = simpleTableViewCell.m; path = ../simpleTableViewCell.m; sourceTree = "<group>"; };
+		4A5F5BA61BE1CAB20066046B /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
+		4A5F5BA71BE1CAB20066046B /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
 		4A610DDB1BE0991800F1B2F2 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
 		4A610DDD1BE0A7ED00F1B2F2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +124,8 @@
 				4A346F1E1BDDC3C200BDACF9 /* Info.plist */,
 				4A346F0D1BDDC3C200BDACF9 /* Supporting Files */,
 				4A610DDB1BE0991800F1B2F2 /* recipes.plist */,
+				4A5F5BA61BE1CAB20066046B /* RecipeDetailViewController.h */,
+				4A5F5BA71BE1CAB20066046B /* RecipeDetailViewController.m */,
 			);
 			path = SimpleTable;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				4A346F461BDDE78000BDACF9 /* simpleTableViewCell.m in Sources */,
 				4A346F121BDDC3C200BDACF9 /* AppDelegate.m in Sources */,
 				4A346F0F1BDDC3C200BDACF9 /* main.m in Sources */,
+				4A5F5BA81BE1CAB20066046B /* RecipeDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

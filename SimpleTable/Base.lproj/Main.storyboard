@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w4I-6U-BNa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2lK-iU-IVB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recipes-->
         <scene sceneID="Lbu-2e-SMG">
             <objects>
                 <tableViewController id="w4I-6U-BNa" customClass="ViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimpleTableCell" rowHeight="71" id="g9h-dA-gPI" customClass="simpleTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="71"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9h-dA-gPI" id="khd-v2-Gcf">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="70.5"/>
@@ -41,6 +41,7 @@
                                     <outlet property="nameLabel" destination="s3H-kU-STc" id="Jr4-Sc-pHC"/>
                                     <outlet property="prepTimeLabel" destination="tzT-ez-WOs" id="5mx-w7-TR0"/>
                                     <outlet property="thumbnailImageView" destination="kRW-gn-CL7" id="Epe-Oy-l73"/>
+                                    <segue destination="KU7-hn-7Ld" kind="show" identifier="showRecipeDetail" id="6A3-Fg-lWh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,10 +50,58 @@
                             <outlet property="delegate" destination="w4I-6U-BNa" id="44X-kU-Lc8"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Recipes" id="7um-vP-muU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLT-HG-2sf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1069" y="340"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AI0-IM-jKc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2lK-iU-IVB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7PL-6u-J6O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w4I-6U-BNa" kind="relationship" relationship="rootViewController" id="Kwf-i2-gWF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMv-L5-i3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="257" y="340"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="dcd-2x-6H8">
+            <objects>
+                <viewController id="KU7-hn-7Ld" customClass="RecipeDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M2N-fm-x1l"/>
+                        <viewControllerLayoutGuide type="bottom" id="z2c-BV-voh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dKg-Yd-IHt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-GK-ztW">
+                                <rect key="frame" x="200" y="275" width="200" height="50"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="recipeLabel" destination="hhh-GK-ztW" id="eFF-9w-qlR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcO-BL-ucr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="340"/>
         </scene>
     </scenes>
 </document>

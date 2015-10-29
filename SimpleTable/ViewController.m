@@ -11,6 +11,7 @@
 //!!!!: test
 #import "ViewController.h"
 #import "simpleTableViewCell.h"
+#import "RecipeDetailViewController.h"
 
 @interface ViewController ()
 
@@ -121,6 +122,20 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
     [recipes removeObjectAtIndex:indexPath.row];
     [self.recipeChecked removeObjectForKey:[NSString stringWithFormat:@"%ld",indexPath.row]];
     [tableView reloadData];
+
+}
+#pragma mark - Notifies the controller that a segue is about to be performed.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showRecipeDetail"]){
+
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        RecipeDetailViewController *destViewController =
+        segue.destinationViewController;
+        destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
+
+
+    }
 
 }
 
