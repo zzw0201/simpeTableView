@@ -17,8 +17,13 @@
 		4A346F411BDDD49100BDACF9 /* 66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A346F401BDDD49100BDACF9 /* 66.jpg */; settings = {ASSET_TAGS = (); }; };
 		4A346F461BDDE78000BDACF9 /* simpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A346F451BDDE78000BDACF9 /* simpleTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		4A5F5BA81BE1CAB20066046B /* RecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F5BA71BE1CAB20066046B /* RecipeDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4A5F5BAB1BE20C6E0066046B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F5BAA1BE20C6E0066046B /* AboutViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4A5F5BAD1BE20D820066046B /* aoubt.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F5BAC1BE20D820066046B /* aoubt.html */; settings = {ASSET_TAGS = (); }; };
 		4A610DDC1BE0991800F1B2F2 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A610DDB1BE0991800F1B2F2 /* recipes.plist */; settings = {ASSET_TAGS = (); }; };
 		4A610DDE1BE0A7ED00F1B2F2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A610DDD1BE0A7ED00F1B2F2 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4A66AEAD1BE9C18F00029074 /* MySearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A66AEAC1BE9C18F00029074 /* MySearchResultsController.m */; settings = {ASSET_TAGS = (); }; };
+		4A66C0FF1BE30FE9005F3E00 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A66C0FE1BE30FE9005F3E00 /* Recipe.m */; settings = {ASSET_TAGS = (); }; };
+		4A73214C1BE9910700FE4834 /* 66@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A73214B1BE9910700FE4834 /* 66@2x.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +64,16 @@
 		4A346F451BDDE78000BDACF9 /* simpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = simpleTableViewCell.m; path = ../simpleTableViewCell.m; sourceTree = "<group>"; };
 		4A5F5BA61BE1CAB20066046B /* RecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailViewController.h; sourceTree = "<group>"; };
 		4A5F5BA71BE1CAB20066046B /* RecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailViewController.m; sourceTree = "<group>"; };
+		4A5F5BA91BE20C6E0066046B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		4A5F5BAA1BE20C6E0066046B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		4A5F5BAC1BE20D820066046B /* aoubt.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = aoubt.html; sourceTree = "<group>"; };
 		4A610DDB1BE0991800F1B2F2 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
 		4A610DDD1BE0A7ED00F1B2F2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4A66AEAB1BE9C18F00029074 /* MySearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySearchResultsController.h; sourceTree = "<group>"; };
+		4A66AEAC1BE9C18F00029074 /* MySearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySearchResultsController.m; sourceTree = "<group>"; };
+		4A66C0FD1BE30FE9005F3E00 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		4A66C0FE1BE30FE9005F3E00 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		4A73214B1BE9910700FE4834 /* 66@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "66@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +124,12 @@
 		4A346F0C1BDDC3C200BDACF9 /* SimpleTable */ = {
 			isa = PBXGroup;
 			children = (
+				4A5F5BAC1BE20D820066046B /* aoubt.html */,
 				4A610DDD1BE0A7ED00F1B2F2 /* Launch Screen.storyboard */,
 				4A346F441BDDE78000BDACF9 /* simpleTableViewCell.h */,
 				4A346F451BDDE78000BDACF9 /* simpleTableViewCell.m */,
 				4A346F401BDDD49100BDACF9 /* 66.jpg */,
+				4A73214B1BE9910700FE4834 /* 66@2x.jpg */,
 				4A346F101BDDC3C200BDACF9 /* AppDelegate.h */,
 				4A346F111BDDC3C200BDACF9 /* AppDelegate.m */,
 				4A346F131BDDC3C200BDACF9 /* ViewController.h */,
@@ -126,6 +141,12 @@
 				4A610DDB1BE0991800F1B2F2 /* recipes.plist */,
 				4A5F5BA61BE1CAB20066046B /* RecipeDetailViewController.h */,
 				4A5F5BA71BE1CAB20066046B /* RecipeDetailViewController.m */,
+				4A5F5BA91BE20C6E0066046B /* AboutViewController.h */,
+				4A5F5BAA1BE20C6E0066046B /* AboutViewController.m */,
+				4A66C0FD1BE30FE9005F3E00 /* Recipe.h */,
+				4A66C0FE1BE30FE9005F3E00 /* Recipe.m */,
+				4A66AEAB1BE9C18F00029074 /* MySearchResultsController.h */,
+				4A66AEAC1BE9C18F00029074 /* MySearchResultsController.m */,
 			);
 			path = SimpleTable;
 			sourceTree = "<group>";
@@ -264,9 +285,11 @@
 			files = (
 				4A610DDC1BE0991800F1B2F2 /* recipes.plist in Resources */,
 				4A346F411BDDD49100BDACF9 /* 66.jpg in Resources */,
+				4A5F5BAD1BE20D820066046B /* aoubt.html in Resources */,
 				4A346F1A1BDDC3C200BDACF9 /* Assets.xcassets in Resources */,
 				4A610DDE1BE0A7ED00F1B2F2 /* Launch Screen.storyboard in Resources */,
 				4A346F181BDDC3C200BDACF9 /* Main.storyboard in Resources */,
+				4A73214C1BE9910700FE4834 /* 66@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +314,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A66AEAD1BE9C18F00029074 /* MySearchResultsController.m in Sources */,
+				4A5F5BAB1BE20C6E0066046B /* AboutViewController.m in Sources */,
+				4A66C0FF1BE30FE9005F3E00 /* Recipe.m in Sources */,
 				4A346F151BDDC3C200BDACF9 /* ViewController.m in Sources */,
 				4A346F461BDDE78000BDACF9 /* simpleTableViewCell.m in Sources */,
 				4A346F121BDDC3C200BDACF9 /* AppDelegate.m in Sources */,

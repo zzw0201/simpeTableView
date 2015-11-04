@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource,UISearchResultsUpdating >
 @property (nonatomic, strong) NSMutableDictionary* recipeChecked;
+@property (nonatomic,strong) UISearchController* searchController;
 
 
 @end

@@ -1,33 +1,22 @@
 //
-//  RecipeDetailViewController.m
+//  MySearchResultsController.m
 //  SimpleTable
 //
-//  Created by ccc on 2015/10/29.
+//  Created by ccc on 2015/11/4.
 //  Copyright © 2015年 guanglin. All rights reserved.
 //
 
-#import "RecipeDetailViewController.h"
+#import "MySearchResultsController.h"
 
-
-@interface RecipeDetailViewController ()
+@interface MySearchResultsController ()
 
 @end
 
-@implementation RecipeDetailViewController
+@implementation MySearchResultsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.recipe.name;
-    self.prepTimeLabel.text = self.recipe.prepTime;
-    self.recipeImageView.image = [UIImage imageNamed:self.recipe.image];
-
-    NSMutableString *ingredientsText = [NSMutableString string];
-    for(NSString *ingredient in self.recipe.ingredients){
-        [ingredientsText appendFormat:@"%@\n",ingredient];
-    }
-    self.ingredientsTextView.text = ingredientsText;
-
-
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

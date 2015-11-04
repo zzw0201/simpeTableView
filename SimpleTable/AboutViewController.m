@@ -1,32 +1,25 @@
 //
-//  RecipeDetailViewController.m
+//  AboutViewController.m
 //  SimpleTable
 //
 //  Created by ccc on 2015/10/29.
 //  Copyright © 2015年 guanglin. All rights reserved.
 //
 
-#import "RecipeDetailViewController.h"
+#import "AboutViewController.h"
 
-
-@interface RecipeDetailViewController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation RecipeDetailViewController
+@implementation AboutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.recipe.name;
-    self.prepTimeLabel.text = self.recipe.prepTime;
-    self.recipeImageView.image = [UIImage imageNamed:self.recipe.image];
-
-    NSMutableString *ingredientsText = [NSMutableString string];
-    for(NSString *ingredient in self.recipe.ingredients){
-        [ingredientsText appendFormat:@"%@\n",ingredient];
-    }
-    self.ingredientsTextView.text = ingredientsText;
-
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"aoubt.html" ofType:nil];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSURLRequest *reqest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:reqest];
 
 }
 
